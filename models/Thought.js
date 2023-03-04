@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const reactionSchema = new mongoose.Schema({
     reactionId: {
         type: mongoose.ObjectId,
-        default: new mongoose.Types.ObjectId()
+        default: ()=>new mongoose.Types.ObjectId()
     },
     createdAt: {
         type: Date,
